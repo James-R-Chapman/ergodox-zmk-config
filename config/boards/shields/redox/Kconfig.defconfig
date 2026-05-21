@@ -1,7 +1,7 @@
-if SHIELD_CORNE_DONGLE
+if SHIELD_REDOX_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "CORNE"
+    default "REDOX"
     
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -20,7 +20,7 @@ config ZMK_BLE
 
 endif
 
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+if SHIELD_REDOX_LEFT || SHIELD_REDOX_RIGHT
 
 config ZMK_SPLIT
 	default y
