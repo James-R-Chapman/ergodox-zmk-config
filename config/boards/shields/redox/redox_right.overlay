@@ -14,23 +14,23 @@
     compatible = "zmk,kscan-gpio-matrix";
     wakeup-source;
 
-    /* 7 scan columns for right half (mirrored order) */
+    /* 7 scan columns for right half (promicro_nrf52840 raw GPIOs) */
     col-gpios
-        = <&pro_micro 16 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        = <&gpio0 10 GPIO_ACTIVE_HIGH>  /* D16 */
+        , <&gpio1 11 GPIO_ACTIVE_HIGH>  /* D14 */
+        , <&gpio1 13 GPIO_ACTIVE_HIGH>  /* D15 */
+        , <&gpio1 15 GPIO_ACTIVE_HIGH>  /* D18 */
+        , <&gpio0 2 GPIO_ACTIVE_HIGH>   /* D19 */
+        , <&gpio0 29 GPIO_ACTIVE_HIGH>  /* D20 */
+        , <&gpio0 31 GPIO_ACTIVE_HIGH>  /* D21 */
         ;
 
-    /* 5 scan rows */
+    /* 5 scan rows (promicro_nrf52840 raw GPIOs) */
     row-gpios
-        = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> /* D4 */
+        , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> /* D5 */
+        , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* D6 */
+        , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> /* D7 */
+        , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* D8 */
         ;
 };

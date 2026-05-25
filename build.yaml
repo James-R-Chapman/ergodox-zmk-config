@@ -5,13 +5,13 @@
 # pass flags to the build command, `snippet` to add a Zephyr snippet, and
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
-# board: [ "nice_nano_v2" ]
+# board: [ "promicro_nrf52840/nrf52840/uf2" ]
 # shield: [ "redox_left", "redox_right" ]
 # include:
 #   - board: bdn9_rev2
-#   - board: nice_nano_v2
+#   - board: promicro_nrf52840/nrf52840/uf2
 #     shield: reviung41
-#   - board: nice_nano_v2
+#   - board: promicro_nrf52840/nrf52840/uf2
 #     shield: redox_left
 #     snippet: studio-rpc-usb-uart
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
@@ -20,20 +20,20 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: redox_dongle prospector_adapter
+    shield: corne_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   - board: seeeduino_xiao_ble
     shield: settings_reset
 
-  - board: nice_nano_v2
+  - board: promicro_nrf52840/nrf52840/uf2
     shield: settings_reset
 
-  - board: nice_nano_v2
+  - board: promicro_nrf52840/nrf52840/uf2
     shield: redox_left
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    
-  - board: nice_nano_v2
+
+  - board: promicro_nrf52840/nrf52840/uf2
     shield: redox_right
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
